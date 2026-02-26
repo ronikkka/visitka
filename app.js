@@ -5,21 +5,18 @@ const state = {
   draftKey: "contactDraft_v1"
 };
 
-// 1) Заполняем footer: список JS-функций (требование задания)
 const features = [
   "Переключение светлой/тёмной темы + сохранение выбора",
-  "Мобильное меню (бургер) с открытием/закрытием",
-  "Анимация появления секций при прокрутке (IntersectionObserver)",
+  "Мобильное меню с открытием/закрытием",
+  "Анимация появления секций при прокрутке",
   "Валидация формы + сохранение черновика в localStorage"
 ];
 
 const jsFeatures = $("#jsFeatures");
 jsFeatures.innerHTML = features.map(f => `<li>${f}</li>`).join("");
 
-// Год в футере
 $("#year").textContent = new Date().getFullYear();
 
-// 2) Тема
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme === "light" ? "light" : "dark";
   localStorage.setItem("theme", theme);
@@ -32,7 +29,6 @@ $("#themeBtn").addEventListener("click", () => {
   toast(`Тема: ${state.theme === "dark" ? "тёмная" : "светлая"}`);
 });
 
-// 3) Мобильное меню
 const menuBtn = $("#menuBtn");
 const nav = $("#siteNav");
 
@@ -48,7 +44,6 @@ nav.addEventListener("click", (e) => {
   menuBtn.setAttribute("aria-expanded", "false");
 });
 
-// 4) Reveal-анимация при прокрутке
 const observer = new IntersectionObserver((entries) => {
   for (const entry of entries) {
     if (entry.isIntersecting) entry.target.classList.add("visible");
@@ -57,7 +52,6 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-// 5) Форма: черновик + валидация
 const form = $("#contactForm");
 const hint = $("#formHint");
 const draft = JSON.parse(localStorage.getItem(state.draftKey) || "{}");
@@ -97,14 +91,12 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  // Демо-отправка: без сервера
   localStorage.removeItem(state.draftKey);
   form.reset();
   hint.textContent = "Сообщение готово. Здесь можно подключить реальную отправку на сервер.";
   toast("Форма успешно проверена.");
 });
 
-// Toast
 const toastEl = $("#toast");
 let toastTimer = null;
 

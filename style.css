@@ -217,11 +217,9 @@ input:focus-visible, textarea:focus-visible{ outline: 2px solid var(--brand); ou
 }
 .toast.show{ transform: translateY(0); opacity: 1; }
 
-/* Анимация появления */
 .reveal{ opacity: 0; transform: translateY(10px); transition: .5s ease; }
 .reveal.visible{ opacity: 1; transform: translateY(0); }
 
-/* ≥ 768px (наращивание для больших экранов) */
 @media (min-width: 768px){
   .header-row{ grid-template-columns: 1fr auto auto; }
   .nav{
