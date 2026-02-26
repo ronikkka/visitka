@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Портфолио — Имя Фамилия</title>
+  <meta name="description" content="Портфолио-резюме: опыт, навыки, проекты, контакты." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">ИФ</div>
+        <div class="brand-text">
+          <div class="name">Имя Фамилия</div>
+          <div class="role">Junior Web Developer / Студент</div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="themeBtn" class="btn btn-ghost" type="button" aria-label="Переключить тему">
+          Тема
+        </button>
+
+        <button id="menuBtn" class="btn btn-ghost" type="button"
+                aria-controls="siteNav" aria-expanded="false">
+          Меню
+        </button>
+      </div>
+
+      <nav id="siteNav" class="nav" aria-label="Навигация по странице">
+        <a class="nav-link" href="#about">О себе</a>
+        <a class="nav-link" href="#skills">Навыки</a>
+        <a class="nav-link" href="#experience">Опыт</a>
+        <a class="nav-link" href="#education">Образование</a>
+        <a class="nav-link" href="#projects">Проекты</a>
+        <a class="nav-link" href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <h1>Привет! Я Имя Фамилия</h1>
+          <p>
+            Короткое описание: чем вы занимаетесь, что ищете, чем сильны (2–3 предложения).
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">Смотреть проекты</a>
+            <a class="btn btn-ghost" href="#contacts">Связаться</a>
+          </div>
+          <div class="meta">
+            <span>Город: Санкт‑Петербург</span>
+            <span>Формат: стажировка / part-time</span>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal">
+          <h2 class="h3">Быстрые ссылки</h2>
+          <ul class="links">
+            <li><a href="https://github.com/USERNAME" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://t.me/USERNAME" target="_blank" rel="noreferrer">Telegram</a></li>
+            <li><a href="mailto:you@example.com">you@example.com</a></li>
+          </ul>
+          <div class="pill">Открыт к предложениям</div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container reveal">
+        <h2>О себе</h2>
+        <p>
+          4–6 строк про ваш профиль: что изучали, в каких задачах сильны, какой стек, что хотите развивать.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3 class="h4">Сильные стороны</h3>
+            <p>Например: ответственность, внимательность к деталям, умение доводить задачу до конца.</p>
+          </article>
+          <article class="card">
+            <h3 class="h4">Интересы</h3>
+            <p>Например: фронтенд, визуальная часть, UX, автоматизация, данные.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container reveal">
+        <h2>Навыки</h2>
+        <div class="chips">
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS3</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Адаптивная верстка</span>
+          <span class="chip">Git</span>
+          <span class="chip">Figma (базово)</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container reveal">
+        <h2>Опыт</h2>
+        <div class="timeline">
+          <article class="item">
+            <div class="item-top">
+              <h3 class="h4">Практика / Подработка — Компания</h3>
+              <div class="muted">2025 — 2026</div>
+            </div>
+            <ul>
+              <li>1–2 пункта: какие задачи решали.</li>
+              <li>1 пункт: какой результат (что улучшили/сделали).</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <div class="item-top">
+              <h3 class="h4">Проект в учебе — Тема</h3>
+              <div class="muted">2024 — 2025</div>
+            </div>
+            <ul>
+              <li>Описание роли и конкретных действий.</li>
+              <li>Технологии: HTML/CSS/JS/…</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section alt">
+      <div class="container reveal">
+        <h2>Образование</h2>
+        <article class="card">
+          <h3 class="h4">ВУЗ / Колледж — Направление</h3>
+          <p class="muted">Годы обучения: 20XX — 20XX</p>
+          <p>1–2 строки: профильные дисциплины, курсовые, достижения.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container reveal">
+        <h2>Проекты</h2>
+        <div class="cards">
+          <article class="card">
+            <h3 class="h4">Проект 1 — Название</h3>
+            <p>Что делает проект (1–2 предложения), какие технологии.</p>
+            <div class="card-actions">
+              <a class="btn btn-small" href="#" target="_blank" rel="noreferrer">Демо</a>
+              <a class="btn btn-ghost btn-small" href="#" target="_blank" rel="noreferrer">Код</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3 class="h4">Проект 2 — Название</h3>
+            <p>Краткое описание и ваша роль.</p>
+            <div class="card-actions">
+              <a class="btn btn-small" href="#" target="_blank" rel="noreferrer">Демо</a>
+              <a class="btn btn-ghost btn-small" href="#" target="_blank" rel="noreferrer">Код</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section alt">
+      <div class="container reveal">
+        <h2>Контакты</h2>
+        <div class="contact-grid">
+          <div class="card">
+            <h3 class="h4">Связаться</h3>
+            <p class="muted">Форма демонстрационная (без сервера): проверка полей + сохранение черновика.</p>
+
+            <form id="contactForm" novalidate>
+              <label class="field">
+                <span>Имя</span>
+                <input name="name" type="text" autocomplete="name" placeholder="Иван" required minlength="2" />
+              </label>
+
+              <label class="field">
+                <span>Email</span>
+                <input name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+              </label>
+
+              <label class="field">
+                <span>Сообщение</span>
+                <textarea name="message" rows="4" placeholder="Коротко опишите вопрос..." required minlength="10"></textarea>
+              </label>
+
+              <label class="checkbox">
+                <input name="agree" type="checkbox" required />
+                <span>Согласен(на) на обработку данных для ответа</span>
+              </label>
+
+              <button class="btn" type="submit">Отправить</button>
+              <p id="formHint" class="hint" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <aside class="card">
+            <h3 class="h4">Профили</h3>
+            <ul class="links">
+              <li><a href="https://github.com/USERNAME" target="_blank" rel="noreferrer">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a href="https://t.me/USERNAME" target="_blank" rel="noreferrer">Telegram</a></li>
+              <li><a href="mailto:you@example.com">you@example.com</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-title">JavaScript-функционал на странице:</div>
+          <ul id="jsFeatures" class="footer-list"></ul>
+        </div>
+        <div class="muted">
+          <div>© <span id="year"></span> Имя Фамилия</div>
+          <div>Верстка: Mobile First</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
