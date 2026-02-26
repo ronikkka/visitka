@@ -19,6 +19,17 @@
   --shadow: 0 10px 30px rgba(15,23,42,.10);
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+  transition: background-color 0.4s ease, 
+              color 0.4s ease, 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease,
+              background 0.4s ease; 
+}
+
+html{ scroll-behavior: smooth; }
+
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
 body{
